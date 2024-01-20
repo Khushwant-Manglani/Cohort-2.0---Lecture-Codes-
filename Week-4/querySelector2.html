@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript HTML DOM</title>
+</head>
+<body>
+  <div>Div one</div>
+  <p>Paragraph one</p>
+  <div>Div two</div>
+  <p>Paragraph two</p>
+  <div>Div three</div>
+  <p>Paragraph three</p>
+
+  <div id="myDiv" style="border: 2px solid blue; padding: 5px";>
+    
+    <h1 class="example">A heading</h1>
+    <p class="example">A paragraph</p>
+    <p class="example">A paragraph</p>
+  
+  </div>
+
+  <p id="displaySpace"></p>
+
+  <script>
+    const paragraph=document.querySelectorAll('p');
+    paragraph.forEach(para => {
+      para.style.backgroundColor='red', para.style.color='white'
+    });
+
+    const element=document.querySelector('#myDiv');
+    const list=element.querySelectorAll('.example');
+    document.getElementById('displaySpace').innerHTML=list.length;
+
+  </script>
+
+</body>
+</html>

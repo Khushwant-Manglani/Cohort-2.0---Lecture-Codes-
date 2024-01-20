@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Javascript HTML DOM</h2>
+  <p>We'll learn the dom in js</p>
+
+  <div id="displaySpace"></div>
+
+  <script>
+    // document.documentElement gives the root element of document that is html tag 
+    // attach the whole page content in id='displaySpace' 
+    document.getElementById('displaySpace').innerHTML=document.documentElement.innerHTML;
+  </script>
+
+</body>
+</html>
