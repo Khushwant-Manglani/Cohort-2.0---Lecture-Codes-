@@ -35,6 +35,8 @@ const user2 = new User({
   age: 18
 });
 
+/****************************************Insert***********************************************************/
+
 // user2.save()
 //   .then((user) => {
 //     // console.log(user);
@@ -53,6 +55,8 @@ const user2 = new User({
 //   .then((data) => {
 //     // console.log(data);
 //   });
+
+/****************************************Find***********************************************************/
 
 // perform find Operations
 
@@ -77,7 +81,30 @@ const user2 = new User({
 //   })
 
 // if we have to find only one element that sattisfy the property
-User.findOne({age: {$gt: 15}})
-  .then((data) => {
-    console.log(data);
-  })
+// User.findOne({age: {$gt: 15}})
+//   .then((data) => {
+//     console.log(data);
+//   })
+
+/****************************************Update***********************************************************/
+
+// now we perform update operations
+
+// User.updateOne({name: "Vijay"}, {age: 25})
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   })
+
+// User.updateMany({age: {$gt: 20}}, {age: 18})
+//   .then((res) => {
+//     console.log(res);
+//   })
+
+User.findOneAndUpdate({name: "Vijay"}, {age: 25}) 
+  .then(res => console.log(res))
+  .catch(err => console.log(err)); 
+
+
