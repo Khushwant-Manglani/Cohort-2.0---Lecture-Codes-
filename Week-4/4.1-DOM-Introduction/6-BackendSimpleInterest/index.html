@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Interest</title>
+</head>
+<body>
+  <form action="">
+    <div>
+      <label for="principleAmount"></label>
+      <input type="text" placeholder="Enter principle amount" id="principleAmount" />
+    </div>
+    <br />
+    <div>
+      <label for="interestRate"></label>
+      <input type="text" placeholder="Enter the rate of interest" id="interestRate" />
+    </div>
+    <br />
+    <div>
+      <label for="years"></label>
+      <input type="text" placeholder="Enter the number of years" id="years" />
+    </div>
+    <br />
+    <div>
+      <button onclick="printCalculateInterest(); return false;" >Calculate Interest</button>
+    </div>
+    <br />
+    <div id="totalInterest" >
+    </div>
+  </form>
+  <script>
+    async function printCalculateInterest() {
+      console.log("Hii there");
+      const principleRate = document.getElementById('principleAmount').value;
+      const interestRate = document.getElementById('interestRate').value;
+      const noOfYears = document.getElementById('years').value;
+      const totalInterest = (principleRate * interestRate * noOfYears) / 100;
+      const response = await fetch('https://sum-server.100xdevs.com/interest?principal=' + principleRate + '&rate=' + interestRate + '&time=' + noOfYears);
+      const data = await response.text();
+      document.getElementById('totalInterest').innerHTML = data;
+    }
+  </script>
+</body>
+</html>

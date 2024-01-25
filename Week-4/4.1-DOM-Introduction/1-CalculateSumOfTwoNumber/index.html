@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate sum of two number</title>
+  
+</head>
+<body>
+  <form action="">
+    <div>
+      <label for="first-number"></label>
+      <input type="text" placeholder="Enter first number" id="first-number" />
+    </div>
+    <br />
+    <div>
+      <label for="second-number"></label>
+      <input type="text" placeholder="Enter first number" id="second-number" />
+    </div>
+    <br />
+    <div>
+      <button onclick="populateDiv(); return false;">Calculate Sum</button>
+    </div>
+    <br />
+    <div id="finalSum">
+    </div>
+
+    <div class="sum">
+    </div>
+    <div class="sum">
+    </div>
+  </form>
+  <script>
+    function populateDiv() {
+      const num1 = document.getElementById("first-number").value;
+      const num2 = document.getElementById("second-number").value;
+      const element = document.getElementById("finalSum");
+      element.innerHTML = "The sum is : " + (parseInt(num1) + parseInt(num2)); 
+
+      document.getElementsByClassName('sum'); // it selects all the class as an array form 
+      // if there are two class then first class access by 
+      document.getElementsByClassName('sum')[0]; // it selects the first tag of class sum
+    }
+  </script>
+</body>
+</html>

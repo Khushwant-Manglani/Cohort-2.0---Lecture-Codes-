@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate sum of two number</title>
+  
+</head>
+<body>
+  <form action="">
+    <div>
+      <label for="first-number"></label>
+      <input type="text" placeholder="Enter first number" id="first-number" />
+    </div>
+    <br />
+    <div>
+      <label for="second-number"></label>
+      <input type="text" placeholder="Enter first number" id="second-number" />
+    </div>
+    <br />
+    <div>
+      <button onclick="populateDiv2(); return false;">Calculate Sum</button>
+    </div>
+    <br />
+    <div id="finalSum">
+    </div>
+  </form>
+  <script>
+    // using promise chaining
+    function populateDiv() {
+      const num1 = document.getElementById("first-number").value;
+      const num2 = document.getElementById("second-number").value;
+      const sumApi = 'https://sum-server.100xdevs.com/sum?a=' + num1 + '&b=' + num2;
+      // fetch() is an asynchronous function
+      fetch(sumApi)
+        .then((response) => {
+          // response.text() is also an asynchronous function
+          response.text()
+            .then((data) => {
+                document.getElementById("finalSum").innerHTML = "The sum is : " + data;
+            })
+        });
+    }
+
+    // using async await
+    async function populateDiv2() {
+      const num1 = document.getElementById("first-number").value;
+      const num2 = document.getElementById("second-number").value;
+      const sumApi = 'https://sum-server.100xdevs.com/sum?a=' + num1 + '&b=' + num2;
+      // fetch() is an asynchronous function
+      const response = await fetch(sumApi);
+      // response.text() is also an asynchronous function
+      const data = await response.text();
+      document.getElementById("finalSum").innerHTML = "The sum is : " + data;
+    }
+  </script>
+</body>
+</html>

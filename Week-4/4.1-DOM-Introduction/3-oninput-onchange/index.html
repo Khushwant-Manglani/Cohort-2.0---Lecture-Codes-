@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate sum of two number</title>
+  
+</head>
+<body>
+  <div>
+    <label for="first-box"></label>
+    <!-- in onchange we change an input then click enter the input get change -->
+    <input type="text" onchange="getChange()" placeholder="Enter anything in first box" id="first-box" />
+  </div>
+  <br />
+  <div>
+    <label for="second-box"></label>
+    <!-- but in oninput we change an input the input get change with out press enter dynamically -->
+    <input type="text" oninput="getChange()" placeholder="Enter anything in second box" id="second-box" />
+  </div> 
+  <br />
+  <div id="changeText">
+  </div>
+  <div id="boldTag">
+  </div>
+  <script>
+    function getChange() {
+      const boxText1 = document.getElementById("first-box").value;
+      const boxText2 = document.getElementById("second-box").value;
+      const element = document.getElementById("changeText");
+      element.innerHTML = boxText1 + boxText2; 
+      document.getElementById("boldTag").innerHTML = "<b>Hii There</b>";
+    }
+  </script>
+</body>
+</html>
