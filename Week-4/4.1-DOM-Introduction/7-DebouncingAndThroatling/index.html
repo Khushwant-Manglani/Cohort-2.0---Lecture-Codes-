@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate sum of two number</title>
+  
+</head>
+<body>
+  <form action="">
+    <div>
+      <label for="first-number"></label>
+      <input type="text" oninput="debouncePopulateDiv()" placeholder="Enter first number" id="first-number" />
+    </div>
+    <br />
+    <div>
+      <label for="second-number"></label>
+      <input type="text" oninput="debouncePopulateDiv()" placeholder="Enter first number" id="second-number" />
+    </div>
+    <br />
+    <div id="finalSum">
+    </div>
+  </form>
+  <script>
+    let timeout;
+    function debouncePopulateDiv() {
+      // delay the call to populateDiv untill i've not call for 100 ms
+      // and I've been called atleast once
+      
+      // how do you cancel the clock ?
+      // clearTimeout lets you clear the timeout
+      clearTimeout(timeout);
+
+      timeout = setTimeout(() => {
+        populateDiv();
+      }, 1000);
+    }
+
+    // using promise chaining
+    function populateDiv() {
+      // debouncing and throatlling
+      const num1 = document.getElementById("first-number").value;
+      const num2 = document.getElementById("second-number").value;
+      const sumApi = 'https://sum-server.100xdevs.com/sum?a=' + num1 + '&b=' + num2;
+      // fetch() is an asynchronous function
+      fetch(sumApi)
+        .then((response) => {
+          // response.text() is also an asynchronous function
+          response.text()
+            .then((data) => {
+                document.getElementById("finalSum").innerHTML = "The sum is : " + data;
+            })
+        });
+    }
+  </script>
+</body>
+</html>
