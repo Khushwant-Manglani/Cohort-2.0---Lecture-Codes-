@@ -1,0 +1,117 @@
+/* 
+CSS Selector Syntax - 
+selector {
+  property: value;
+} 
+*/
+
+/* we can directly select an html tag and apply css by the help of css selector */
+/* 
+h1 {
+
+}
+
+span {
+
+}
+
+div {
+
+} 
+*/
+
+/* it is not a good practice to select tags directly */
+
+/* We can use the class and id to select html elements it is a good practice */
+
+/* 
+
+Syntax to select by class-name
+
+We can give more that one class and we can also give same class to different elements
+.class-name {
+  
+}
+
+*/
+
+/* 
+
+Syntax to select by id
+
+We can give only one id and the id is unique for every element
+#id-name {
+
+}
+
+*/
+
+/* 
+
+One selector that selects the whole html page and update
+that is an universal selector Syntax - 
+* {
+  
+}
+
+*/
+
+/* 
+Custom selector - Combines the tons of selector to make an unique selector
+
+If we want to selects only the divs that has class="class-name"
+then we use this syntax - 
+div.class-name {
+
+}
+
+If we want to select the h1 that has class="class1 class-name" and id="id2"
+then we use this syntax
+h1.class1.class-name#id2 {
+
+}
+
+If we want to give the same property to diff elements means
+select the h1 that has class="class1 class-name" and id="id2"
+and also select span
+then we use this syntax - here , denotes or
+h1.class1.class-name#id2, span {
+
+}
+
+============================================================================================
+
+div.class {
+  color: green;
+}
+
+.green {
+  color: green;
+}
+
+optimised ways is - 
+
+div.class, .green {
+  color: green;
+}
+
+*/
+
+/* 
+
+if we want to select the all the p tags inside the div 
+then we use this syntax - 
+It selects all the p tags inside div tag
+div p {
+
+}
+
+if we want to select the all the p tags that has class="red" inside the div that has class="class-name"
+then we use this syntax - 
+It selects all the p tags that has class="red" inside the div that has class="class-name"
+div.class-name p.red {
+
+}
+
+*/
+

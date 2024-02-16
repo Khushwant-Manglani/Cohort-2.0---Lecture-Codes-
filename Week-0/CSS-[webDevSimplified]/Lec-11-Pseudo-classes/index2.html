@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* It will only select the span thats is the first child of any parent */
+    /* 
+    span:first-child {
+      color: red;
+    } 
+    */
+
+    /* It will only select the span thats is the last child of any parent */
+    /* 
+    span:last-child {
+      color: red;
+    } 
+    */
+
+    /* It selects the first span in any parent element */
+    /*
+    span:first-of-type {
+      color: red;
+    }
+    */
+
+    /* It selects the last span in any parent element */
+    /*
+    span:last-of-type {
+      color: red;
+    }
+    */
+
+    /* It selects the span that is the second child of any parent */
+    /*
+    span:nth-child(2) {
+      color: red;
+    }
+    */
+
+    /* It selects all the span that is the even child of any parent */
+    /*
+    span:nth-child(even) {
+      color: red;
+    }
+    */
+
+    /* It selects all the span that is the odd child of any parent */
+    /*
+    span:nth-child(odd) {
+      color: red;
+    }
+    */
+
+    /* It selects all the span that is the 2n(by putting n -> from 0 to n) child of any parent */
+    /*
+    span:nth-child(2n) {
+      color: red;
+    }
+    */
+
+    /* It selects all the span that is the 2n + 1(by putting n -> from 0 to n) child of any parent */
+    /*
+    span:nth-child(2n+3) {
+      color: red;
+    }
+    */
+
+    /* It selects all the span from last that is the 2n(by putting n -> from 0 to n) child of any parent */
+    /* 
+    span:nth-last-child(2n) {
+      color: red;
+    } 
+    */
+    
+    /* It selects all the span acc. to all the span 2n child in any parent element */
+    /*
+    span:nth-of-type(2n) {
+      color: red;
+    }
+    */
+
+    /* It selects the last 2nd span in any parent element */
+    /*
+    span:nth-last-of-type(2) {
+      color: red;
+    } 
+    */
+
+  </style>
+
+</head>
+<body>
+  <div>
+    <div>div</div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>
+      4
+      <span>Inner 1</span>
+      <span>Inner 2</span>
+    </span>
+    <span>5</span>
+    <div>div</div>
+  </div>
+  <div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+  </div>
+</body>
+</html>

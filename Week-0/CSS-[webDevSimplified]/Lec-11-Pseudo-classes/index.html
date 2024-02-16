@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psuedo Classes</title>
+
+  <style>
+
+    /* selector:psuedo-class {} */
+
+    /* 0, 0, 2, 0 */
+    .submit:hover {
+      background-color: red;
+    }
+
+    /* 0, 0, 2, 0 */
+    .submit:focus {
+      background-color: blue;
+    }
+
+    /* 0, 0, 2, 0 */
+    .email:disabled {
+      background-color: aqua;
+    }
+
+    /* 0, 0, 2, 0 */
+    .email:hover {
+      background-color: rebeccapurple;
+    }
+
+    /* 0, 0, 2, 0 */
+    .name:hover {
+      background-color: brown;
+    }
+
+    /* 0, 0, 2, 0 */
+    .name:focus {
+      background-color: wheat;
+    }
+    
+    /* This property override the hover and focus pseudo-class */
+    /* 0, 0, 2, 0 */
+    .name:required {
+      background-color: palegreen;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div>
+    <label>Email: </label>
+    <input type="email" class="email" disabled>
+  </div>
+  <div>
+    <label>My Name Is: </label>
+    <input type="text" class="name" required>
+  </div>
+  <button type="submit" class="submit">Send</button>
+</body>
+</html>

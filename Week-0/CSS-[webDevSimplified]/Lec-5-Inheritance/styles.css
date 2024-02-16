@@ -1,0 +1,18 @@
+div {
+  color: blue;
+  border: 1px solid black;
+}
+
+/* the child of div is p tag it inherits the color blue given in div tag bu default */
+/* But the child inherits only some property by default like color but it cannot inherit border */
+
+/* =========================================================================================================== */
+/* We can use the property for inherit the child or not  */ 
+
+p {
+  /* initial cannot inherit the property of parent it has only the property of itself */
+  color: initial;
+  /* inherit property inherit the property of its parent */
+  border: inherit; 
+}
+

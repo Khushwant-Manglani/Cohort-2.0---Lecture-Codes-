@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specificity</title>
+
+  <!-- If we give the diff property to same element one after the other then the after means blow part overrides the upper part and change the property given in upper part -->
+  <!-- And the specificity change acc. to given no. of id, class, and elements -->
+  <!-- Depends on no. of -->
+  <!-- (Important), (Ids), (Classes, attribute, psuedo-classes), (Element, psuedo-elements) -->
+
+  <style>
+
+    /* The red color in below h2 tag override the upper blue color */
+
+    /* 
+    h2 {
+      color: blue;
+    }
+
+    h2 {
+      color: red;
+    } 
+
+    */
+
+    /* ============================================================================================================================================== */
+
+    /* Check Specificity */
+    
+    /* 0, 1, 0, 0 */
+    #header-id {
+      color: aqua;
+    }
+
+    /* 0, 0, 1, 0 */
+    .header-class {
+      color: beige;
+    }
+
+    /* 0, 0, 0, 1 */
+    h2 {
+      color: blue;
+    }
+
+    /* 0, 0, 1, 1 */
+    h2.header-class {
+      color: blanchedalmond;
+    }
+
+    /* 1, 0, 0, 1 */
+    h2 {
+      color: brown !important;
+    }
+
+    /* 0, 1, 1, 2 */
+    div#div-id span.span-class {
+      color: blueviolet;
+    }
+
+    /* Inline style css override all other property except the important */
+
+  </style>
+</head>
+<body>
+  <h2 id="header-id" class="header-class">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, corrupti?</h2>
+  <p class="para-id" class="para-class">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, eligendi.</p>
+  <div id="div-id" class="div-class">Lorem ipsum <span class="span-class">Lorem ipsum dolor sit amet.</span> dolor sit amet.</div>
+</body>
+</html>
