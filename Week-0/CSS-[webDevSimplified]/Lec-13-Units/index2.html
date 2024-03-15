@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Units - (rem, em)</title>
+
+  <style>
+
+    /*
+      rem - 
+      rem stands for "root em" and is a unit that measures the font size of the **root** element of a document. The root element is the <html> element. 
+      Rem is a relative unit, which means that all values that use it change when the root's font-size changes. For example, if the root element is 16px, an element with the value 1rem will also equal 16px. This means that 1 REM keeps the same value throughout your whole CSS code. 
+      By default, most browsers use a font size value of 16px. If the <html> element doesn't have a specified font-size, the browser default of 16px is used. 
+      nrem = n*16 px
+
+      em - 
+      em stands for "em" and is a unit that measures the font size of the **nearest-parent or itself** element of a document. 
+      em is a relative unit, which means that all values that use it change when the parent's or its font-size changes. For example, if the parent element font-size is 16px, an child element with the value 1em will also equal 16px.  
+      parent font size is 16px
+      child have any property value set 2em = 2*16 = 32px
+    */
+
+    .parent {
+      font-size: 30px;
+      border: 2px solid black;
+    }
+
+    .item {
+      background-color: red;
+      margin: 5px 0;
+    }
+
+    .rem {
+      /* root element means <html> font size by default is 16px. So, therefore 2rem is 2*16px == 32px*/
+      font-size: 2rem;
+    }
+
+    .em {
+      /* em depends on the parent font-size and itself */
+      /* em is works like an percentage 1em == 100% , 2em == 200% both depends on the parent */
+      /* But em is also depend on itself */
+      /* But remember em is only based on font-size property but the % is works on based on diff properties */
+
+      /* If the parent font size is 30px then 2em is 2*30px == 60px means the font-size: 60px */
+      /* font-size: 2em; */
+
+      /* If the parent font size is 30px then 2em is 2*30px == 60px means the padding: 60px */
+      padding: 2em;
+
+      /* But remember if we change the font-size here then em depend on this size and make change */
+
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="item rem">1 REM</div>
+  <div class="item em">1 EM</div>
+  <div class="parent">
+    <div class="item rem">1 REM</div>
+    <div class="item em">1 EM</div>
+  </div>
+</body>
+</html>

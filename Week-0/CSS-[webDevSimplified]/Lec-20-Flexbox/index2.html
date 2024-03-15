@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    .container {
+      /* in display: flex; the margin does not collapse */
+      display: flex;
+      height: 500px;
+      background-color: #CCC;
+      border: 2px solid black;
+      
+      /* 
+        By default flex-direction: row;
+        But when we apply property flex-direction: column;
+        Then the axis will reverse(or flips) means
+        the main-axis becomes the cross-axis
+        and the cross-axis will become the main-axis
+        means justify-content works vertically
+        and align-items works horizontally
+      */
+
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .item {
+      background-color: grey;
+      border: 2px solid black;
+      margin: 10px;
+      width: 75px;
+      color: yellow;
+    }
+
+    .item-1 {
+      min-height: 50px;
+    }
+
+    .item-2 {
+      min-height: 100px;
+    }
+
+    .item-3 {
+      min-height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+  </div>
+</body>
+</html>

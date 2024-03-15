@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Flow</title>
+  <style>
+    .div1 {
+      width: 100px;
+      background-color: lightblue;
+    }
+    .span1 {
+      /* It is an display:inline by default so we have to give an display: inline-block or block to change it property */
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color: antiquewhite;
+    }
+    .span2 {
+      /* display: none; removes the display of the element */
+      display: none;
+      background-color: lightcoral;
+    }
+    .div2 {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">I am div</div>
+  <span class="span1">I am span</span>
+  <button class="btn">I am button</button>
+  <span class="span2">I am another span</span>  
+  <div class="div2">I am another div</div>
+</body>
+</html>

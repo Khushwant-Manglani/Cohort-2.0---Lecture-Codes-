@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model</title>
+  <style>
+
+    /* 
+      - margin of the upper and lower div collapse with each other
+        whichever margin the largest is apply between them
+
+      - the box-sizing property has a border-box option that tells the browser to include 
+        the element's padding and border in its width and height.
+        For example, if an element's width is set to 100 pixels, 
+        the 100 pixels will include any added border or padding, and 
+        the content box will shrink to absorb the extra width.
+        width + padding + border = actual width of an element
+        height + padding + border = actual height of an element
+    */
+
+    .div-1 {
+      background-color: rgb(242, 107, 242);
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+
+      /*
+      padding-top: 20px;
+      padding-right: 30px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+      */
+
+      /* Short form  */
+      /* top right bottom left */
+      /* padding: 20px 30px 20px 10px; */
+
+      /* Short form  */
+      /* (top/bottom) (right/left) */
+      /* padding: 20px 10px; */
+
+      margin: 30px;
+
+      /*       
+      margin-top: 20px;
+      margin-right: 30px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+      */
+
+      /* Short form  */
+      /* top right bottom left */
+      /* margin: 20px 30px 20px 10px; */
+
+      /* Short form  */
+      /* (top/bottom) (right/left) */
+      /* margin: 20px 10px; */
+
+      border: 20px solid black;
+      
+      /*
+      border-top-width: 30px;
+      border-right-width: 20px;
+      border-bottom-width: 50px;
+      border-left-width: 10px;
+      */
+
+      /* Short form  */
+      /* top right bottom left */
+      /* border-width: 20px 30px 20px 10px; */
+      
+      /* Short form  */
+      /* (top/bottom) (right/left) */
+      /* border-width: 20px 10px; */
+
+      /* box-sizing: border-box; */
+    }
+
+    .div-2 {
+      background-color: rgb(114, 232, 232);
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="div-1">One</div>
+  <div class="div-2">Two</div>
+</body>
+</html>

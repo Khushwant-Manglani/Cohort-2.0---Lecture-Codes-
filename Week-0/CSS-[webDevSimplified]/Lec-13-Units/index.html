@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Units - (px, %, vw, vh)</title>
+  <style>
+
+    /* 
+    - px - pixel does not depends on any parent or screen size its value is remains same always.
+    - % - percent depends on the size of its parent and get change acc. to that in percent.
+    - vw, vh - these both are based on the entire size or viewport of the screen no matter where they are placed.
+    */
+
+    .parent {
+      width: 200px;
+      border: 2px solid black;
+    }
+
+    .item {
+      background-color: red;
+      height: 20px;
+      margin: 5px 0; 
+    }
+
+    .item-percent {
+      width: 50%;
+    }
+
+    .item-view-width {
+      width: 50vw;
+      height: 25vh;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="item item-percent">50 percent</div>
+  <div class="item item-view-width">50 view width</div>
+  <div class="parent">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item item-percent">50 percent</div>
+    <div class="item item-view-width">50 view width</div>
+  </div>
+</body>
+</html>

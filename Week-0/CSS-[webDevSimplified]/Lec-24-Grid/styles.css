@@ -1,0 +1,74 @@
+.container {
+  width: 600px;
+  height: 300px;
+  background-color: yellow;
+
+  /* To make the grid inline we use inline-grid */
+  /* display: inline-grid; */
+
+  display: grid;
+  /* grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-template-columns: 200px 200px 200px; */
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-row-gap: 10px;
+  grid-column-gap: 30px; */
+  /* grid-gap: 10px 30px; */
+  grid-gap: 10px;
+
+  /* Set all the items(container) horizontally we use justify-items */
+
+  /* justify-items: start; */
+  /* justify-items: end; */
+  /* justify-items: center; */
+
+  /* Set all the items(container) vertically we use align-items */
+
+  /* align-items: start; */
+  /* align-items: end; */
+  /* align-items: center; */
+
+  /* When the value of both justify-items and align-items are same then we use place-items */
+  /* place-items: start; */
+  /* place-items: end; */
+  place-items: center;
+}
+
+.item {
+  width: 100px;
+  height: 50px;
+  background-color: greenyellow;
+  border: 2px solid black;
+  text-align: center;
+}
+
+
+.item-1 {
+  /* grid-column-start: 1;
+  grid-column-end: 4; */
+  /* grid-column: 1 / 3; */
+  /* grid-column: 1 / span 2; */
+
+  /* Set the single item horizontally we use justify-self */
+  /* justify-self: start; */
+  justify-self: end;
+  /* justify-self: center; */
+
+  /* Set the single item vertically we use align-self */
+  /* align-self: start; */
+  align-self: end;
+  /* align-self: center; */
+
+  /* When the value of both justify-self and align-self are same then we use place-self */
+  /* place-self: start; */
+  place-self: end;
+  /* place-self: center; */
+} 
+
+.item-2 {
+  /* grid-row-start: 1;
+  grid-row-end: 4; */
+  /* grid-row: 1 / 4; */
+  /* grid-row: 1 / span 3;    */
+}

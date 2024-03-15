@@ -3,7 +3,7 @@ div {
   border: 1px solid black;
 }
 
-/* the child of div is p tag it inherits the color blue given in div tag bu default */
+/* the child of div is p tag it inherits the color blue given in div tag by default */
 /* But the child inherits only some property by default like color but it cannot inherit border */
 
 /* =========================================================================================================== */

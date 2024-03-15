@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+
+    /* 
+      there are two property of flex-box
+      display: flex; - it works like an display: block; container take full width space
+      display: inline-flex; - it works like an display: inline; container not take full width space
+    */
+
+    .container {
+      /* in display: flex; the margin does not collapse */
+      /* display: inline-flex; */
+      display: flex;
+      background-color: #CCC;
+      border: 2px solid black;
+    }
+
+    .item {
+      background-color: grey;
+      border: 2px solid black;
+      margin: 10px;
+      width: 75px;
+      color: yellow;
+    }
+
+    /* 
+      1. flex-shrink - here we give the value that how much shrink we want in element when the display get minimize
+      like - 0 means not shrink, 1 means by default, 2 means shrink by twice, 
+      3 means shrinf by thrice 
+
+      2. short hand to define flex-grow, flex-basis, flex-shrink with eaxh other in one line
+
+      flex: flex-grow flex-shrink flex-basis
+
+      if we give only one value as flex then two flex-shrink, and flex-basis get set by default
+      if we give only two value as flex then one flex-basis get set by default
+
+      3. align-self: this property is use to change the alignment of the individual item 
+
+      4. order: we can give order and sort item acc. to that but it is not good practice to use it will not change the orignal html
+    */
+
+    .item-1 {
+      /* here flex-basis is 0 thats why shrink fast */
+      /* flex: 1 0 0; */
+      /* here flex-basis is auto thats why not shrink fast */
+      /* flex: 1 0 auto; */
+      
+      flex-grow: 1;
+      align-self: flex-start;
+      min-height: 50px;
+      /* flex-shrink: 0; */
+      /* flex-shrink: 2; */
+    }
+
+    .item-2 {
+      align-self: center;
+      min-height: 100px;
+    }
+
+    .item-3 {
+      min-height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+  </div>
+  <span>This is span</span>
+</body>
+</html>

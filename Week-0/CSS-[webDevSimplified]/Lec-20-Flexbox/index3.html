@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    .container {
+      /* in display: flex; the margin does not collapse */
+      display: flex;
+      background-color: #CCC;
+      border: 2px solid black;
+      
+    }
+
+    .item {
+      background-color: grey;
+      border: 2px solid black;
+      margin: 10px;
+      width: 75px;
+      color: yellow;
+    }
+
+    /* 
+      flex-grow - property helps the element to grow the width up to the remaining width in parent container 
+    
+      flex-basis - asume that from where we start growing the element    
+    */
+
+    .item-1 {
+      min-height: 50px;
+    }
+
+    .item-2 {
+      min-height: 100px;
+      flex-grow: 2;
+      flex-basis: 0;
+    }
+
+    .item-3 {
+      min-height: 150px;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+  </div>
+</body>
+</html>
